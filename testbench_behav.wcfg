@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="500000001fs"></ZoomEndTime>
+      <Cursor1Time time="410053000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="176"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/instrmem/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/instrmem/RD" type="array">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/instrmem/instr_mem_reg" type="array">
+      <obj_property name="ElementShortName">instr_mem_reg[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_mem_reg[31:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/we3" type="logic">
+      <obj_property name="ElementShortName">we3</obj_property>
+      <obj_property name="ObjectShortName">we3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/A1" type="array">
+      <obj_property name="ElementShortName">A1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/A3" type="array">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/WD3" type="array">
+      <obj_property name="ElementShortName">WD3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/RD1" type="array">
+      <obj_property name="ElementShortName">RD1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/RD2" type="array">
+      <obj_property name="ElementShortName">RD2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/registers/registers" type="array">
+      <obj_property name="ElementShortName">registers[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[31:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/sign/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:7]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:7]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/sign/immExt" type="array">
+      <obj_property name="ElementShortName">immExt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">immExt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/alu/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/alu/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/alu/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/alu/Result" type="array">
+      <obj_property name="ElementShortName">Result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/alu/Sum" type="array">
+      <obj_property name="ElementShortName">Sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/mem/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/mem/WD" type="array">
+      <obj_property name="ElementShortName">WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/mem/RD" type="array">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_tb/mem/data_register" type="array">
+      <obj_property name="ElementShortName">data_register[1023:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_register[1023:0][31:0]</obj_property>
+   </wvobject>
+</wave_config>
