@@ -21,7 +21,8 @@
 
 
 module PCAdder (
-  input wire [31:0] PCF, output wire [31:0] PCPlus4F
+  input   [31:0] PCF, 
+  output  [31:0] PCPlus4F
 );
 
 

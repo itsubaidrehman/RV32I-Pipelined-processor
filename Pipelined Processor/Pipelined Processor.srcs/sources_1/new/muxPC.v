@@ -21,7 +21,9 @@
 
 
 module muxPC(
-input wire [31:0] PCPlus4F, PCTargetE, input wire PCSrcE,
+input      [31:0] PCPlus4F, 
+input      [31:0] PCTargetE, 
+input             PCSrcE,
 output reg [31:0] PCFbar
 
     );

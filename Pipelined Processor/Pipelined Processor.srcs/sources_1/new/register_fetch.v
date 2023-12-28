@@ -20,9 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module register_fetch (
-  input wire clk, rst,
-  input wire [31:0] instr, PCF, PCPlus4F,
-  output reg [31:0] instrD, PCD, PCPlus4D
+  input      clk, 
+  input      rst,
+  input      [31:0] instr, 
+  input      [31:0] PCF, 
+  input      [31:0] PCPlus4F,
+  output reg [31:0] instrD, 
+  output reg [31:0] PCD, 
+  output reg [31:0] PCPlus4D
 );
   
   always @(posedge clk)
