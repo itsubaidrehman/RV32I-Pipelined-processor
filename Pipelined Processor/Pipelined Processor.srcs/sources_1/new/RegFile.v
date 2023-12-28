@@ -23,7 +23,7 @@
 module RegFile(
     input        clk, 
     input        rst,
-    input        regWriteW,
+    input        RegWriteW,
     input  [4:0] A1,
     input  [4:0] A2,
     input  [4:0] RdW,         //A3
@@ -43,7 +43,7 @@ module RegFile(
                     registers[i] <= 32'd0;
                 end
     
-            end else if (regWriteW && (|RdW)) begin    //|RdW, avoid writing at x0
+            end else if (RegWriteW && (|RdW)) begin    //|RdW, avoid writing at x0
                 registers[RdW] <= ResultW;
             end
         end
