@@ -32,19 +32,19 @@ module RegFile(
     );
   
     reg [31:0] registers [31:0];
+    integer i;
   
     assign RD1 = (rst) ? 32'h00000000 : registers[A1];
     assign RD2 = (rst) ? 32'h00000000 : registers[A2];
     
-    always @(posedge clk)
-        begin
-            if (rst)
-            begin
-            registers[RdW] <= 0;
-            end
-            else if (regWriteW && (|RdW))   //|RdW will avoid writting to x0 or (RdW!==00000)
-            begin
-            registers[RdW] <= ResultW;
+   always @(negedge clk) begin
+            if (rst) begin
+                for(i = 0; i < 32;i = i + 1) begin
+                    registers[i] <= 32'd0;
+                end
+    
+            end else if (regWriteW && (|RdW)) begin    //|RdW, avoid writing at x0
+                registers[RdW] <= ResultW;
             end
         end
   
