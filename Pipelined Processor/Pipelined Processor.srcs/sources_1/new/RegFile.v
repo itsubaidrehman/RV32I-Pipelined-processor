@@ -48,12 +48,12 @@ module RegFile(
             end
         end
   
-  initial begin
-        registers[4] = 32'd14;//32'h00000005;
-        registers[5] = 32'h00000006;
-        registers[6] = 32'd10;//32'h00000004;
-        registers[9] = 32'h00000020;
+//  initial begin
+//        registers[4] = 32'd14;//32'h00000005;
+//        registers[5] = 32'h00000006;
+//        registers[6] = 32'd10;//32'h00000004;
+//        registers[9] = 32'h00000020;
         
-    end
+//    end
 
 endmodule
