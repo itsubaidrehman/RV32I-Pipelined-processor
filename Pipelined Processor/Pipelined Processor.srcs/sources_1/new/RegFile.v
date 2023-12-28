@@ -21,22 +21,30 @@
 
 
 module RegFile(
-    input wire clk, we3, rst,
-    input wire [4:0] A1, A2, A3,
-    input wire [31:0] WD3,
+    input        clk, 
+    input        rst,
+    input        regWriteW,
+    input  [4:0] A1,
+    input  [4:0] A2,
+    input  [4:0] RdW,         //A3
+    input  [31:0] ResultW,
     output [31:0] RD1, RD2
     );
   
     reg [31:0] registers [31:0];
   
-    assign RD1 = (~rst) ? 32'h00000000 : registers[A1];
-    assign RD2 = (~rst) ? 32'h00000000 : registers[A2];
+    assign RD1 = (rst) ? 32'h00000000 : registers[A1];
+    assign RD2 = (rst) ? 32'h00000000 : registers[A2];
     
     always @(posedge clk)
         begin
-            if (we3)
+            if (rst)
             begin
-            registers[A3] = WD3;
+            registers[RdW] <= 0;
+            end
+            else if (regWriteW && (|RdW))   //|RdW will avoid writting to x0 or (RdW!==00000)
+            begin
+            registers[RdW] <= ResultW;
             end
         end
   
