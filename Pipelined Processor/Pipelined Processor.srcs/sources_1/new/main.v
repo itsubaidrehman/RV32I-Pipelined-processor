@@ -56,6 +56,7 @@ input clk, rst
         wire [31:0] WriteDataM, PCPlus4M, PCPlus4W;
         wire        CarryOut, RegWriteM, MemWriteM;
         wire [31:0] ReadData, ReadDataW, WriteDataE;
+        wire [1:0]  ForwardAE, ForwardBE;
         
         
         muxPC mux1 (
@@ -170,7 +171,7 @@ input clk, rst
         );
                 
         ALU alu (
-        .SrcAE(SrcAE),
+        .SrcAE(SrcAE ),    //.SrcAE(SrcAE
         .SrcBE(SrcBE),
         .ALUControlE(ALUControlE),
         .funct3E(funct3E),
@@ -188,7 +189,7 @@ input clk, rst
         
          mux_execute mux2 (
          .ALUSrcE(ALUSrcE),
-         .RD2E(RD2E),
+         .WriteDataE(WriteDataE),
          .ImmExtE(ImmExtE),
          .SrcBE(SrcBE)
          
@@ -267,6 +268,22 @@ input clk, rst
         .ImmSrcD(ImmSrcD)
         );
         
+        
+        forward1_mux #(32) muxxx (
+                .RD1E      (RD1E      ),
+                .ResultW   (ResultW   ),
+                .ALUResultM(ALUResultM),
+                .ForwardAE (ForwardAE ),
+                .SrcAE     (SrcAE     )
+            );
+        
+            forward2_mux #(32) muxxxxx (
+                .RD2E      (RD2E      ),
+                .ResultW   (ResultW   ),
+                .ALUResultM(ALUResultM),
+                .ForwardBE (ForwardBE ),
+                .WriteDataE(WriteDataE)
+            );
         
         
        
