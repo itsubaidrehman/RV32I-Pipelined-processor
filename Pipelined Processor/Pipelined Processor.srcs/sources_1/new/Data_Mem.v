@@ -25,8 +25,8 @@ module Data_Memo(
     input             clk,
     input             MemWriteM,
     input             rst,
-    output reg [31:0] ReadData,
-    output reg [31:0] DM0
+    output reg [31:0] ReadData
+    
 );
 
     reg [31:0] data_mem [255:0];   //2D array for data memory
