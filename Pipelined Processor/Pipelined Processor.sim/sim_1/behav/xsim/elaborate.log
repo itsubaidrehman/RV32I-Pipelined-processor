@@ -3,16 +3,29 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto f6f31c0301b7421ba48ecece46f51932 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pipeline_tb_behav xil_defaultlib.pipeline_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-426] cannot find port funct3E on this module [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:165]
-ERROR: [VRFC 10-426] cannot find port PCSrcE on this module [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:157]
-ERROR: [VRFC 10-426] cannot find port ZeroE on this module [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:148]
-ERROR: [VRFC 10-426] cannot find port funct3 on this module [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:140]
-ERROR: [VRFC 10-2063] Module <ALU> not found while processing module instance <alu> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:172]
-ERROR: [VRFC 10-2063] Module <PCTarget> not found while processing module instance <pcTarget> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:183]
-ERROR: [VRFC 10-2063] Module <mux_execute> not found while processing module instance <mux2> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:189]
-ERROR: [VRFC 10-2063] Module <register_execute_mem> not found while processing module instance <reg3> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:197]
-ERROR: [VRFC 10-2063] Module <Data_Mem> not found while processing module instance <data_mem> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:216]
-ERROR: [VRFC 10-2063] Module <register_mem_wb> not found while processing module instance <reg4> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:226]
-ERROR: [VRFC 10-2063] Module <mux_wb> not found while processing module instance <mux3> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:246]
-ERROR: [VRFC 10-2063] Module <controller> not found while processing module instance <cu> [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:255]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 25 for port instr [D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v:112]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.muxPC
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.PCAdder
+Compiling module xil_defaultlib.register_fetch
+Compiling module xil_defaultlib.Instruction_Fetch
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.register_decode_execute
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.PCTarget
+Compiling module xil_defaultlib.mux_execute
+Compiling module xil_defaultlib.register_execute_mem
+Compiling module xil_defaultlib.Data_Mem
+Compiling module xil_defaultlib.register_mem_wb
+Compiling module xil_defaultlib.mux_wb(WIDTH=32)
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.pipeline_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pipeline_tb_behav

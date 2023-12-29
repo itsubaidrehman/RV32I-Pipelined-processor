@@ -14,11 +14,12 @@ module register_decode_execute(
   input            MemWriteD,
   input            ALUSrcD,
   input            RegWriteD,
-  input            BranchD,
+  input            BranchD, 
+  input            ZeroE,
   input            JumpD, //PCSrc
   input      [1:0] ResultSrcD,
   input      [4:0] ALUControlD,
-  input      [2:0] ImmSrcD,
+  input      [2:0] ImmSrcD,funct3,
   output reg [31:0] RD1E,
   output reg [31:0] RD2E,
   output reg [31:0] PCE,
@@ -27,18 +28,19 @@ module register_decode_execute(
   output reg [31:0] PCPlus4E,
   output reg       MemWriteE,
   output reg       ALUSrcE,
+  output reg       PCSrcE,
   output reg       RegWriteE,
   output reg       BranchE,
   output reg       JumpE, //PCSrc
   output reg [1:0] ResultSrcE,
   output reg [4:0] ALUControlE,
-  output reg [2:0] ImmSrcE
+  output reg [2:0] ImmSrcE, funct3E
 
 
     );
     
-    reg PCSrcE;
-    wire ZeroE;
+    
+    
   
   always @(posedge clk) begin
         if (rst) begin
@@ -56,6 +58,7 @@ module register_decode_execute(
             RD2E        <= 32'd0;
             Rs1E        <= 0;
             Rs2E        <= 0;
+            funct3E     <= 0;
             RdE         <= 5'd0;
             
         end
@@ -76,6 +79,7 @@ module register_decode_execute(
             Rs1E        <= Rs1D;
             Rs2E        <= Rs2D;
             RdE         <= RdD;
+            funct3E     <= funct3;
            
         end
         

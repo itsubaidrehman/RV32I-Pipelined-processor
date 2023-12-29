@@ -36,7 +36,8 @@
 ----------------------------------------------------------------------
 | 1111  |   ALU_Out = 1 if A=B else 0;
 ----------------------------------------------------------------------*/
-module ALU(
+
+module ALU (
 
     input      [31:0] SrcAE,SrcBE,  // ALU 32-bit Inputs
     input      [4:0]  ALUControlE,  // ALU Selection

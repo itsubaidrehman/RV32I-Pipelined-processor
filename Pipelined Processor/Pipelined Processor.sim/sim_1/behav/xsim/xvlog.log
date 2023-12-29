@@ -36,5 +36,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipeli
 INFO: [VRFC 10-311] analyzing module register_mem_wb
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sim_1/new/pipeline_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeline_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
