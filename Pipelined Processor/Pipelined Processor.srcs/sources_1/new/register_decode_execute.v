@@ -8,7 +8,7 @@ module register_decode_execute(
   input     [31:0] RD1,
   input     [31:0] RD2,
   input     [31:0] PCD,
-  input     [4:0]  RdD,
+  input     [4:0]  RdD,Rs1D, Rs2D,
   input     [31:0] ImmExtD,
   input     [31:0] PCPlus4D,
   input            MemWriteD,
@@ -22,7 +22,7 @@ module register_decode_execute(
   output reg [31:0] RD1E,
   output reg [31:0] RD2E,
   output reg [31:0] PCE,
-  output reg [4:0]  RdE,
+  output reg [4:0]  RdE, Rs1E, Rs2E,
   output reg [31:0] ImmExtE,
   output reg [31:0] PCPlus4E,
   output reg       MemWriteE,
@@ -54,7 +54,8 @@ module register_decode_execute(
             PCPlus4E    <= 32'd0;
             RD1E        <= 32'd0;
             RD2E        <= 32'd0;
-            
+            Rs1E        <= 0;
+            Rs2E        <= 0;
             RdE         <= 5'd0;
             
         end
@@ -72,7 +73,8 @@ module register_decode_execute(
             PCPlus4E    <= PCPlus4D;
             RD1E        <= RD1;
             RD2E        <= RD2;
-            
+            Rs1E        <= Rs1D;
+            Rs2E        <= Rs2D;
             RdE         <= RdD;
            
         end

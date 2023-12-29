@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Controller (
+module controller (
     input      [6:0] OP,
     input      [6:0] funct77,
     input      [2:0] funct3,

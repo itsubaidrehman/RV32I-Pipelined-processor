@@ -22,15 +22,15 @@
 module ProgramCounter(
     input wire clk, rst,
     input [31:0] PCFbar,
-    output reg [31:0] PC
+    output reg [31:0] PCF
     );
     //reg [31:0] pc_register;
     always @(posedge clk)       //non-blocking because of seq circuit
         begin
             if (rst)  //active high reset
-            PC <= 0;
+            PCF <= 0;
             else
-            PC <= PCFbar;
+            PCF <= PCFbar;
         end
     
     

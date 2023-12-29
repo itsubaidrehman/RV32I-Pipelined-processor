@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/29/2023 09:14:39 AM
+// Create Date: 12/29/2023 10:16:48 AM
 // Design Name: 
-// Module Name: mux_execute
+// Module Name: mux_wb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,17 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module mux_execute(
-  input             ALUSrcE,
-  input      [31:0] RD2E,
-  input      [31:0] ImmExtE,
-  output reg [31:0] SrcBE
-  
+module mux_wb #
+(
+     parameter WIDTH = 8
+) (
+     input  [WIDTH-1:0] ALUResultW,
+     input  [WIDTH-1:0] ReadDataW,
+     input  [WIDTH-1:0] PCPlus4W,
+     input  [1:0]       ResultSrcW,
+     output [WIDTH-1:0] ResultW
 );
-  
-  always @(*)
-    begin
-      SrcBE = ALUSrcE ? ImmExtE : RD2E;
-    end
-    
+     assign ResultW = ResultSrcW[1] ? PCPlus4W : (ResultSrcW[0] ? ReadDataW : ALUResultW);
 endmodule

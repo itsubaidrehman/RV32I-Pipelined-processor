@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module Data_Memo(
+module Data_Mem(
     input      [31:0] WriteDataM,
     input      [31:0] ALUResultM,
     input             clk,
