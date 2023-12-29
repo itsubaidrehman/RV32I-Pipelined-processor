@@ -28,14 +28,32 @@ module RegFile(
     input  [4:0] A2,
     input  [4:0] RdW,         //A3
     input  [31:0] ResultW,
-    output [31:0] RD1, RD2
+    output reg [31:0] RD1, RD2
     );
   
     reg [31:0] registers [31:0];
     integer i;
+    
+    always @(*) begin
+            registers[28] = 32'd6;
+            registers[22] = 32'd4;
+            registers[18] = 32'd6;
+    
+            
+            RD1 = registers[A1];
+            RD2 = registers[A2];
+    
+//            checkx1 = Registers[1];
+//            checkx2 = Registers[2];
+//            checkx3 = Registers[3];
+//            checkx4 = Registers[19];
+//            checkx5 = Registers[5];
+//            checkx6 = Registers[6];
+            
+        end
   
-    assign RD1 = (rst) ? 32'h00000000 : registers[A1];
-    assign RD2 = (rst) ? 32'h00000000 : registers[A2];
+//    assign RD1 = (rst) ? 32'h00000000 : registers[A1];
+//    assign RD2 = (rst) ? 32'h00000000 : registers[A2];
     
    always @(negedge clk) begin
             if (rst) begin

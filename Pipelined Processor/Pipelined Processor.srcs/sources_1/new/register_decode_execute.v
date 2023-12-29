@@ -41,7 +41,7 @@ module register_decode_execute(
   output reg [31:0] RD2E,
   output reg [31:0] PCE,
   output reg [31:0] RdE,
-  output reg [31:0] immExtE,
+  output reg [31:0] ImmExtE,
   output reg [31:0] PCPlus4E,
   output reg       MemWriteE,
   output reg       ALUSrcE,
@@ -54,6 +54,9 @@ module register_decode_execute(
 
 
     );
+    
+    reg PCSrcE;
+    wire ZeroE;
   
   always @(posedge clk) begin
         if (rst) begin
