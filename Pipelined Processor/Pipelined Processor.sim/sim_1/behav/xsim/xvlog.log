@@ -1,0 +1,40 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/InstrFetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/PCAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/PCTarget.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCTarget
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/ProgramCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/muxPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module muxPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/mux_execute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_execute
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/mux_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/register_decode_execute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_decode_execute
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/register_execute_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_execute_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/register_fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sources_1/new/register_mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.srcs/sim_1/new/pipeline_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/RV32I-Pipelined-processor/Pipelined Processor/Pipelined Processor.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
