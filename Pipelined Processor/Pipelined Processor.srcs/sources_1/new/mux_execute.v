@@ -21,7 +21,7 @@
 
 module mux_execute(
   input             ALUSrcE,
-  input      [31:0] RD2E,
+  input      [31:0] WriteDataE,//RD2E,
   input      [31:0] ImmExtE,
   output reg [31:0] SrcBE
   
@@ -29,7 +29,7 @@ module mux_execute(
   
   always @(*)
     begin
-      SrcBE = ALUSrcE ? ImmExtE : RD2E;
+      SrcBE = ALUSrcE ? ImmExtE : WriteDataE;//RD2E;
     end
     
 endmodule

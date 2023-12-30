@@ -148,7 +148,6 @@ input clk, rst
         .BranchD(BranchD),
         .ALUSrcD(ALUSrcD),
         .ZeroE(ZeroE),
-        
         .ResultSrcD(ResultSrcD),
         .ALUControlD(ALUControlD),
         .RegWriteE(RegWriteE),
@@ -271,18 +270,18 @@ input clk, rst
         
         
         forward1_mux #(32) muxxx (
-                .RD1E      (RD1E      ),
-                .ResultW   (ResultW   ),
+                .RD1E(RD1E),
+                .ResultW(ResultW),
                 .ALUResultM(ALUResultM),
-                .ForwardAE (ForwardAE ),
-                .SrcAE     (SrcAE     )
+                .ForwardAE(ForwardAE ),
+                .SrcAE(SrcAE)
             );
         
         forward2_mux #(32) muxxxxx (
-                .RD2E      (RD2E      ),
-                .ResultW   (ResultW   ),
+                .RD2E(RD2E),
+                .ResultW(ResultW),
                 .ALUResultM(ALUResultM),
-                .ForwardBE (ForwardBE ),
+                .ForwardBE (ForwardBE),
                 .WriteDataE(WriteDataE)
             );
             
