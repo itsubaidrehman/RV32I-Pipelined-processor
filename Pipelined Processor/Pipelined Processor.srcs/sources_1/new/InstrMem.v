@@ -26,7 +26,7 @@ module InstrMem (
   output reg [31:0] instr
     );
   
-    reg [31:0] instr_mem_reg [31:0];
+    reg [31:0] instr_mem_reg [255:0];  //256 locations for instr, each instr of 32 bits
     //assign RD = (~rst) ? {32{1'b0}} : instr_mem_reg[A[31:0]];  // not instr_mem_reg[A] ??
     always @(*)
       begin
@@ -36,18 +36,39 @@ module InstrMem (
         instr = instr_mem_reg[PCF[31:2]];
 
       end
-    
-//    initial
-//      begin
-//        //@00000000
-//        //0062E3B3
-//        //0062F433
-//        instr_mem_reg[0] <= 32'hFFC4A303;
-//        //instr_mem_reg[1] <=  32'h0062E3B3;
-//        //instr_mem_reg[2] <= 32'h0062F433;
-//        instr_mem_reg[1] <= 32'h0064A423;
-//        instr_mem_reg[2] <= 32'h0062E233;
-//        instr_mem_reg[3] <= 32'hFE420AE3;
-//      end
+      
+          initial
+            begin
+            instr_mem_reg[0] <= 32'h01450513;
+            instr_mem_reg[1] <= 32'h00a58593;
+            instr_mem_reg[2] <= 32'h00060613;
+            instr_mem_reg[3] <= 32'h00068693;
+            instr_mem_reg[4] <= 32'h00170713;
+            instr_mem_reg[5] <= 32'h01f78793;
+            instr_mem_reg[6] <= 32'h02d61c63;
+            instr_mem_reg[7] <= 32'h40b508b3;
+            instr_mem_reg[8] <= 32'h00f8d8b3;
+            instr_mem_reg[9] <= 32'h00e8c8b3;
+            instr_mem_reg[10] <= 32'h00d89a63;
+            instr_mem_reg[11] <= 32'h00a68833;
+            instr_mem_reg[12] <= 32'h00b68533;
+//            010685b3
+//            fed680e3
+//            00d59663
+//            00160613
+//            fcd68ae3
+//            40b50533
+//            fcd686e3
+//            00a688b3
+//            01142023
+            end
+      
+//      //D:\RV32I-Pipelined-processor\Pipelined Processor\Pipelined Processor.srcs\sources_1\new
+//      initial begin
+//              //prefer absolute paths in simulators
+//              $readmemh("D:\RV32I-Pipelined-processor\Pipelined Processor\Pipelined Processor.srcs\sources_1\new\imstruction.mem", instr_mem_reg);
+//          end
+
+
 endmodule
 
