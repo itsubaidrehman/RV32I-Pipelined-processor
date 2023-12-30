@@ -73,24 +73,24 @@ module ALU (
     always @ (*)
     begin
         case(ALUControlE)
-        5'b00000: ALU_Result =   SrcAE + SrcBE ;
-        5'b00001: ALU_Result =   SrcAE - SrcBE ;
-        5'b00010: ALU_Result =   SrcAE * SrcBE;
-        5'b00011: ALU_Result =   SrcAE / SrcBE;
-        5'b00100: ALU_Result =   SrcAE<< SrcBE;
-        5'b00101: ALU_Result =   SrcAE>> SrcBE;
-        5'b00110: ALU_Result =  {SrcAE[30:0],SrcAE[31]};
-        5'b00111: ALU_Result =  {SrcAE[0],SrcAE[31:1]};
-        5'b01000: ALU_Result =   SrcAE & SrcBE;
-        5'b01001: ALU_Result =   SrcAE | SrcBE;
-        5'b01010: ALU_Result =   SrcAE ^ SrcBE;
-        5'b01011: ALU_Result = ~(SrcAE | SrcBE);
-        5'b01100: ALU_Result = ~(SrcAE & SrcBE);
-        5'b01101: ALU_Result = ~(SrcAE ^ SrcBE);
-        5'b01110: ALU_Result =  (SrcAE > SrcBE)  ? 32'd1 : 32'd0 ;
-        5'b01111: ALU_Result =  (SrcAE == SrcBE) ? 32'd1 : 32'd0 ;
-        5'b10000: ALU_Result =   SrcBE;
-        default:  ALU_Result =   SrcAE + SrcBE ;
+        5'b00000: ALUResult =   SrcAE + SrcBE ;
+        5'b00001: ALUResult =   SrcAE - SrcBE ;
+        5'b00010: ALUResult =   SrcAE * SrcBE;
+        5'b00011: ALUResult =   SrcAE / SrcBE;
+        5'b00100: ALUResult =   SrcAE<< SrcBE;
+        5'b00101: ALUResult =   SrcAE>> SrcBE;
+        5'b00110: ALUResult =  {SrcAE[30:0],SrcAE[31]};
+        5'b00111: ALUResult =  {SrcAE[0],SrcAE[31:1]};
+        5'b01000: ALUResult =   SrcAE & SrcBE;
+        5'b01001: ALUResult =   SrcAE | SrcBE;
+        5'b01010: ALUResult =   SrcAE ^ SrcBE;
+        5'b01011: ALUResult = ~(SrcAE | SrcBE);
+        5'b01100: ALUResult = ~(SrcAE & SrcBE);
+        5'b01101: ALUResult = ~(SrcAE ^ SrcBE);
+        5'b01110: ALUResult =  (SrcAE > SrcBE)  ? 32'd1 : 32'd0 ;
+        5'b01111: ALUResult =  (SrcAE == SrcBE) ? 32'd1 : 32'd0 ;
+        5'b10000: ALUResult =   SrcBE;
+        default:  ALUResult =   SrcAE + SrcBE ;
         endcase
     end
     

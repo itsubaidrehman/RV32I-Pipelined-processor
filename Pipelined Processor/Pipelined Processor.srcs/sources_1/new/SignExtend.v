@@ -21,7 +21,7 @@
 
 
 module SignExtend(
-  input wire [31:7] instr,      //[24:0]
+  input wire [31:7] Imm,      //[24:0]
   input wire [2:0] ImmSrcD,
   output reg [31:0] ImmExtD
     );
@@ -32,10 +32,10 @@ module SignExtend(
     begin
     casex (ImmSrcD)
     
-    3'b000:  ImmExtD = {{20{instr[31]}}, instr[31:20]};                            // I?type
-    3'b001:  ImmExtD = {{20{instr[31]}}, instr[31:25], instr[11:7]};                  // S?type (stores)
-    3'b010:  ImmExtD = {{20{instr[31]}}, instr[7],  instr[30:25], instr[11:8], 1'b0};   // B?type (branches)
-    3'b011:  ImmExtD = {{12{instr[31]}}, instr[19:12],  instr[20], instr[30:21], 1'b0}; // J?type (branches)
+    3'b000:  ImmExtD = {{20{Imm[31]}}, Imm[31:20]};                            // I?type
+    3'b001:  ImmExtD = {{20{Imm[31]}}, Imm[31:25], Imm[11:7]};                  // S?type (stores)
+    3'b010:  ImmExtD = {{20{Imm[31]}}, Imm[7],  Imm[30:25], Imm[11:8], 1'b0};   // B?type (branches)
+    3'b011:  ImmExtD = {{12{Imm[31]}}, Imm[19:12],  Imm[20], Imm[30:21], 1'b0}; // J?type (branches)
     //3'b100:  ImmExtD = {Imm[31:12],12'b000000000000};                           // U?type
     default: ImmExtD = 32'dx;  
     

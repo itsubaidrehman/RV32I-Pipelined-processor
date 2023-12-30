@@ -36,7 +36,8 @@ module controller (
 );
     
     
-    
+    wire [16:0] checker;
+    assign checker = {{OP},{funct3},{funct77}};
     reg [1:0]   ALUOp;
     always @ (*) begin
         casex (OP)
@@ -131,7 +132,7 @@ module controller (
 
     always @ (*) begin
 
-        casex ({{OP},{funct3},{funct77}})
+        casex (checker)
             17'b01100110000000000: ALUControlD = 5'b00000;
             17'b01100110000100000: ALUControlD = 5'b00001;
             17'b01100110000000001: ALUControlD = 5'b00010;

@@ -28,34 +28,56 @@ module RegFile(
     input      [4:0] A2,
     input      [4:0] RdW,         //A3
     input      [31:0] ResultW,
-    output reg [31:0] RD1, RD2,
-    output reg [31:0] checkx1,  //it is to see x1 of register file (you can ignore it if your simulator allows you to see full RF)
-    output reg [31:0] checkx2,
-    output reg [31:0] checkx3,
-    output reg [31:0] checkx4,
-    output reg [31:0] checkx5,
-    output reg [31:0] checkx6
-
+    output reg [31:0] RD1, RD2
+    
     );
   
     reg [31:0] registers [31:0];
     integer i;
+    integer j;
+   
     
     always @(*) begin
             registers[28] = 32'd6;
             registers[22] = 32'd4;
             registers[18] = 32'd6;
+            registers[1] = 32'd6;
+            registers[2] = 32'd6;
+            registers[3] = 32'd6;
+            registers[4] = 32'd6;
+            registers[5] = 32'd6;
+            registers[6] = 32'd6;
+            registers[7] = 32'd6;
+            registers[8] = 32'd6;
+            registers[9] = 32'd6;
+            registers[10] = 32'd6;
+            registers[11] = 32'd6;
+            registers[12] = 32'd6;
+            registers[13] = 32'd6;
+            registers[14] = 32'd6;
+            registers[15] = 32'd6;
+            registers[16] = 32'd6;
+            registers[17] = 32'd6;
+            registers[19] = 32'd6;
+            registers[20] = 32'd6;
+            registers[21] = 32'd6;
+            registers[29] = 32'd6;
+            registers[23] = 32'd6;
+            registers[24] = 32'd6;
+            registers[25] = 32'd6;
+            registers[26] = 32'd6;
+            registers[27] = 32'd6;
     
             
             RD1 = registers[A1];
             RD2 = registers[A2];
     
-            checkx1 = registers[1];
-            checkx2 = registers[2];
-            checkx3 = registers[3];
-            checkx4 = registers[19];
-            checkx5 = registers[5];
-            checkx6 = registers[6];
+//            checkx1 = registers[1];
+//            checkx2 = registers[2];
+//            checkx3 = registers[3];
+//            checkx4 = registers[19];
+//            checkx5 = registers[5];
+//            checkx6 = registers[6];
             
         end
   

@@ -21,19 +21,12 @@
 
 
 module main(
-input clk, rst,
+input clk, rst
 
-output wire [31:0] checkx1,
-output wire [31:0] checkx2,
-output wire [31:0] checkx3,
-output wire [31:0] checkx4,
-output wire [31:0] checkx5,
-output wire [31:0] checkx6,
-output wire [31:0] DM0,
-output wire [31:0] instr
+
 
     );
-        //wire [31:0] instr;
+        wire [31:0] instr;
         wire [31:0] PCF, PCFbar;
         wire [31:0] PCPlus4F, instrD, PCD, PCPlus4D, SrcAE;
         wire [4:0]  A1, A2, RdD, RdW, RdE, RdM, Rs1E, Rs2E, Rs1D, Rs2D;
@@ -120,7 +113,7 @@ output wire [31:0] instr
         );
         
         SignExtend sign_extend (
-        .instr(instr),      //[24:0]
+        .Imm(Imm),      //[24:0]
         .ImmSrcD(ImmSrcD),
         .ImmExtD(ImmExtD)
                 );
@@ -134,14 +127,7 @@ output wire [31:0] instr
         .RegWriteW(RegWriteW),
         .rst(rst),
         .RD1(RD1),
-        .RD2(RD2),
-        
-        .checkx1  (checkx1  ),
-        .checkx2  (checkx2  ),
-        .checkx3  (checkx3  ),
-        .checkx4  (checkx4  ),
-        .checkx5  (checkx5  ),
-        .checkx6  (checkx6  )
+        .RD2(RD2)
 
         
         );
