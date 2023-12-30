@@ -57,6 +57,7 @@ input clk, rst
         wire        CarryOut, RegWriteM, MemWriteM;
         wire [31:0] ReadData, ReadDataW, WriteDataE;
         wire [1:0]  ForwardAE, ForwardBE;
+         wire        StallF, StallD, FlushE, FlushD;
         
         
         muxPC mux1 (
@@ -277,14 +278,33 @@ input clk, rst
                 .SrcAE     (SrcAE     )
             );
         
-            forward2_mux #(32) muxxxxx (
+        forward2_mux #(32) muxxxxx (
                 .RD2E      (RD2E      ),
                 .ResultW   (ResultW   ),
                 .ALUResultM(ALUResultM),
                 .ForwardBE (ForwardBE ),
                 .WriteDataE(WriteDataE)
             );
-        
+            
+        hazard_unit i_hu (
+            .Rs1E(Rs1E),
+            .Rs2E(Rs2E),
+            .RdM(RdM),
+            .RdW(RdW),
+            .Rs1D(Rs1D),
+            .Rs2D(Rs2D),
+            .RdE(RdE),
+            .ResultSrcE(ResultSrcE),
+            .RegWriteM(RegWriteM),
+            .RegWriteW(RegWriteW),
+            .PCSrcE(PCSrcE),
+            .StallF(StallF),
+            .StallD(StallD),
+            .FlushE(FlushE),
+            .FlushD(FlushD),
+            .ForwardAE(ForwardAE ),
+            .ForwardBE(ForwardBE )
+         );
         
        
         
