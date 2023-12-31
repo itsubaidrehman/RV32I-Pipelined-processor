@@ -133,21 +133,21 @@ module controller (
     always @ (*) begin
 
         casex (checker)
-            17'b01100110000000000: ALUControlD = 5'b00000;
-            17'b01100110000100000: ALUControlD = 5'b00001;
-            17'b01100110000000001: ALUControlD = 5'b00010;
-            17'b01100111000000001: ALUControlD = 5'b00011;
+            17'b01100110000000000: ALUControlD = 5'b00000; //add
+            17'b01100110000100000: ALUControlD = 5'b00001; //sub
+            17'b01100110000000001: ALUControlD = 5'b00010; //mul - not in risc-v spec
+            17'b01100111000000001: ALUControlD = 5'b00011; //div - not in risc-v , funct3 - 100, funct77 - 0000001
             17'b01100111100000001: ALUControlD = 5'b00000; //rem defined wrong
-            17'b01100111110000000: ALUControlD = 5'b01000;
-            17'b01100111100000000: ALUControlD = 5'b01001;
-            17'b01100111000000000: ALUControlD = 5'b01010;
-            17'b01100110010000000: ALUControlD = 5'b00100; //sll,logical shift left
-            17'b01100111010000000: ALUControlD = 5'b00101; //srl,logical shift right
+            17'b01100111110000000: ALUControlD = 5'b01000; //and - funct3 - 111, funct77 - 0
+            17'b01100111100000000: ALUControlD = 5'b01001; //or - funct3 - 110, funct77 - 0
+            17'b01100111000000000: ALUControlD = 5'b01010; //xor - funct3 - 100, funct77 - 0
+            17'b01100110010000000: ALUControlD = 5'b00100; //sll,logical shift left - funt3 - 001
+            17'b01100111010000000: ALUControlD = 5'b00101; //srl,logical shift right - funct3 - 101
             17'b0010011000xxxxxxx: ALUControlD = 5'b00000;
-            17'b11000110001111111: ALUControlD = 5'b00001; //beq
-            17'b1100011001xxxxxxx: ALUControlD = 5'b00001;
-            17'b0000011010xxxxxxx: ALUControlD = 5'b00000;
-            17'b0100011010xxxxxxx: ALUControlD = 5'b00000; 
+            17'b11000110001111111: ALUControlD = 5'b00001; //beq - op - 1100011(b-type), 
+            17'b1100011001xxxxxxx: ALUControlD = 5'b00001; //bne - funct3 - 001
+            17'b0000011010xxxxxxx: ALUControlD = 5'b00000; //lw
+            17'b0100011010xxxxxxx: ALUControlD = 5'b00000; //sw
             17'b0110111xxxxxxxxxx: ALUControlD = 5'b10000; //U-type
             default:               ALUControlD = 5'b00000;
         endcase
