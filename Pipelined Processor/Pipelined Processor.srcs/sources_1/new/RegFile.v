@@ -28,13 +28,19 @@ module RegFile(
     input      [4:0] A2,
     input      [4:0] RdW,         //A3
     input      [31:0] ResultW,
-    output reg [31:0] RD1, RD2
+    output reg [31:0] RD1, RD2,
+    output reg [31:0] checkx1,  //it is to see x1 of register file (you can ignore it if your simulator allows you to see full RF)
+    output reg [31:0] checkx2,
+    output reg [31:0] checkx3,
+    output reg [31:0] checkx4,
+    output reg [31:0] checkx5,
+    output reg [31:0] checkx6
     
     );
   
     reg [31:0] registers [31:0];
     integer i;
-    integer j;
+    //integer j;
    
     
     always @(*) begin
@@ -72,12 +78,12 @@ module RegFile(
             RD1 = registers[A1];
             RD2 = registers[A2];
     
-//            checkx1 = registers[1];
-//            checkx2 = registers[2];
-//            checkx3 = registers[3];
-//            checkx4 = registers[19];
-//            checkx5 = registers[5];
-//            checkx6 = registers[6];
+            checkx1 = registers[1];
+            checkx2 = registers[2];
+            checkx3 = registers[3];
+            checkx4 = registers[19];
+            checkx5 = registers[5];
+            checkx6 = registers[6];
             
         end
   

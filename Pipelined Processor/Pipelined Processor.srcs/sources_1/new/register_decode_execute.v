@@ -19,7 +19,7 @@ module register_decode_execute(
   input            JumpD, //PCSrc
   input      [1:0] ResultSrcD,
   input      [4:0] ALUControlD,
-  input      [2:0] ImmSrcD,funct3,
+  input      [2:0] funct3, //ImmSrcD
   output reg [31:0] RD1E,
   output reg [31:0] RD2E,
   output reg [31:0] PCE,
@@ -34,7 +34,7 @@ module register_decode_execute(
   output reg       JumpE, //PCSrc
   output reg [1:0] ResultSrcE,
   output reg [4:0] ALUControlE,
-  output reg [2:0] ImmSrcE, funct3E
+  output reg [2:0] funct3E //ImmSrcE
 
 
     );
