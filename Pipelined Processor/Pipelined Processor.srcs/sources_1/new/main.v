@@ -21,13 +21,14 @@
 
 
 module main(
-input clk, rst,
-output wire [31:0] checkx1,
-output wire [31:0] checkx2,
-output wire [31:0] checkx3,
-output wire [31:0] checkx4,
-output wire [31:0] checkx5,
-output wire [31:0] checkx6
+input clk, rst
+//used to get simulation results on vivado
+//output wire [31:0] checkx1,
+//output wire [31:0] checkx2,
+//output wire [31:0] checkx3,
+//output wire [31:0] checkx4,
+//output wire [31:0] checkx5,
+//output wire [31:0] checkx6
 
     );
         wire [31:0] instr;
@@ -131,13 +132,13 @@ output wire [31:0] checkx6
         .RegWriteW(RegWriteW),
         .rst(rst),
         .RD1(RD1),
-        .RD2(RD2),
-        .checkx1(checkx1),
-        .checkx2(checkx2),
-        .checkx3(checkx3),
-        .checkx4(checkx4),
-        .checkx5(checkx5),
-        .checkx6(checkx6)
+        .RD2(RD2)
+//        .checkx1(checkx1),
+//        .checkx2(checkx2),
+//        .checkx3(checkx3),
+//        .checkx4(checkx4),
+//        .checkx5(checkx5),
+//        .checkx6(checkx6)
 
         
         );
